@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url(fonts/avenir_ff/AvenirLTStd-Book.otf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: "ffdinconlight";
+    src: url(fonts/ff-din-font-family/FF_DIN_OT_Cond_Light.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: "ffdinreglight" ;
+    src: url(fonts/ff-din-font-family/FF_DIN_OT_Light.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'ffdinregmed';
+    src: url(fonts/ff-din-font-family/FF_DIN_Pro_Medium.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'ffdinconmed';
+    src: url(fonts/ff-din-font-family/FF_DIN_Pro_Cond_Medium.ttf) format('truetype');
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+  
+  body{
+    background-color: rgb(14, 14, 14);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+  
+  header{
+    height: 30px;
+    width: 100%;
+    background-color: dark;
+    font-size: 25px;
+    padding-top:20px;
+  }
+  
+  .navbar {
+    width: 100%;
+    height: 60px;
+    background-color: dark;
+    position: relative;
+  }
+  
+  .nom {
+    position: absolute;
+    color: white;
+    display: block;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 20px;
+    margin: auto;
+    font-family: "ffdinreglight", sans-serif;
+  }
+  
+  .header-menu {
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    display: flex;
+    font-size: 27px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    font-family: "ffdinreglight", sans-serif;
+  }
+  
+  .header-menu-item {
+    color: white;
+    text-align: center;
+    margin: 0 60px;
+    padding-bottom: 6px;
+    padding-top: 6px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .header-menu-item:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .header-menu-item:hover:before {
+    width: 100%;
+  }
+  
+  .header-menu-item:hover {
+    opacity: 0.7;
+  }
+  
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 250px;
+    padding-left: 500px;
+    padding-right: 500px;
+}
+
+.video{
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+
+
+

@@ -14,3 +14,9 @@ window.onscroll = function() {
     });
   }
 };
+
+document.addEventListener("DOMContentLoaded", function() {
+  var containerA = document.querySelector('.containerA');
+  containerA.style.opacity = 1;
+});
+

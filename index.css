@@ -1,30 +1,56 @@
-*{
+@font-face {
+    font-family: 'Avenir-Roman';
+    src: url(fonts/avenir_ff/AvenirLTStd-Book.otf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: "ffdinconlight";
+    src: url(fonts/ff-din-font-family/FF_DIN_OT_Cond_Light.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: "ffdinreglight" ;
+    src: url(fonts/ff-din-font-family/FF_DIN_OT_Light.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'ffdinregmed';
+    src: url(fonts/ff-din-font-family/FF_DIN_Pro_Medium.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'ffdinconmed';
+    src: url(fonts/ff-din-font-family/FF_DIN_Pro_Cond_Medium.ttf) format('truetype');
+  }
+  
+  *{
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
-}
-
-body{
-    background-color: black;
+  }
+  
+  body{
+    background-color: rgb(14, 14, 14);
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-header{
+  }
+  
+  header{
     height: 30px;
     width: 100%;
     background-color: dark;
     font-size: 25px;
-}
-
-.navbar {
+    padding-top:20px;
+  }
+  
+  .navbar {
     width: 100%;
     height: 60px;
     background-color: dark;
     position: relative;
   }
   
-.nom {
+  .nom {
     position: absolute;
     color: white;
     display: block;
@@ -34,32 +60,35 @@ header{
     right: 0;
     top: 20px;
     margin: auto;
+    font-family: "ffdinreglight", sans-serif;
   }
   
-.header-menu {
+  .header-menu {
     background-color: transparent;
     transition: background-color 0.5s ease;
     display: flex;
     font-size: 27px;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 50px;
     margin-bottom: 30px;
     position: sticky;
     top: 0px;
     z-index: 10;
-}
-
-.header-menu-item {
+    font-family: "ffdinreglight", sans-serif;
+  }
+  
+  .header-menu-item {
     color: white;
     text-align: center;
     margin: 0 60px;
-    padding-bottom: 5px;
+    padding-bottom: 6px;
+    padding-top: 6px;
     transition: all 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
-}
-
-.header-menu-item:before {
+  }
+  
+  .header-menu-item:before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -68,15 +97,13 @@ header{
     height: 2px;
     background-color: white;
     transition: all 0.3s ease-in-out;
-}
-
-.header-menu-item:hover:before {
+  }
+  
+  .header-menu-item:hover:before {
     width: 100%;
-}
-
-p{
-    color: white;
-}
-
-
-
+  }
+  
+  .header-menu-item:hover {
+    opacity: 0.7;
+  }
+  
