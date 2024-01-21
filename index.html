@@ -1,33 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        body {
-            background-color: #000000;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        video {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta name="viewport" class="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="lib/css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
-    <video autoplay muted loop id="myVideo">
-        <source src="videos/Showreel.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="center-text">
-        WELCOME !<br>
-        My name is Solal Zetlaoui, I'm a 3rd year graphic and motion designer.<br>
-        Feel free to visit my page and contact me on any of these platforms !
+    <div id="hero" class="hero">
+        <div>
+            <video class="video" playsinline muted loop autoplay>
+                <source src="videos/Showreel.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <div id="greetings" class="greetings">
+            Hi, I'm Solal. <br>
+            Nice to meet you. <br>
+        </div>
+        <div class="chevron" style="cursor: pointer;">
+            <img src="lib/img/down-chevron.svg">
+        </div>
+       
+    </div> 
+    <div id="homecontent" class="homecontent">
+        <div class="header">
+            <a href="#">Home</a>
+            <a href="#">Motion</a>
+            <a href="#">Graphic Design</a>
+            <a href="#">Artworks</a>
+            <a href="#">Contact</a>
+            <a href="#">About me</a>
+        </div>
+        <p class="large">
+                I make all kinds <br> of creative stuff.
+        </p>
+        <p class="text_1">
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore 
+            et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure 
+            dolor in reprehenderit in voluptate velit esse 
+            cillum dolore eu fugiat nulla pariatur. 
+        </p>
+        <p class="text_2">
+            Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore 
+            et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure 
+            dolor in reprehenderit in voluptate velit esse 
+            cillum dolore eu fugiat nulla pariatur. 
+        </p>
+        <p id="output"></p>
+
     </div>
+    <script src="lib/js/index.js" defer></script>
 </body>
 </html>
+
