@@ -44,7 +44,7 @@ body{
 }
 
 .greetings{
-    font-family: Montserrat-bold;
+    font-family: Montserrat-bold, sans-serif;
     position: absolute;
     bottom: 15%;
     left: 35%;
