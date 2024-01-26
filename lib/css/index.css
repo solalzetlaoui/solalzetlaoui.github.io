@@ -1,129 +1,215 @@
-@font-face {
-    font-family: 'Montserrat-regular';
-    src: url(../fonts/Montserrat-Regular.ttf) format('truetype');
+
+/* Animations d'apparation */
+.hidden{
+    opacity: 0;
+    transition: all 2s;
 }
 
-@font-face {
-    font-family: 'Montserrat-light';
-    src: url(../fonts/Montserrat-Light.ttf) format('truetype');
+.show{
+    opacity: 1;
 }
 
-@font-face {
-    font-family: 'Montserrat-bold';
-    src: url(../fonts/Montserrat-bold.ttf) format('truetype');
+/* Le site commence là */
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
 }
 
 body{
-    background-color: rgb(0, 0, 0);
-    font-family: Montserrat-light;
+    background-color: #000000;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
 }
 
-@media only screen and (max-width: 600px){
-    body .video
-    {
-        height: 100vh;
-        width: 100vw;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
+#hero-text{
+    position: absolute;
+    bottom: 15%;;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color:#ffffff;
+    z-index: 1;
+    font-size: 30px;
+}
+
+#chevron{
+    position: absolute;
+    z-index: 1;
+    transform: translate(-50%, -50%) scale(0.2); /* très important d'avoir le translate AVANT le scale sinon l'objet n'est pas centré !*/
+    bottom: -15%;
+    left: 50%;
+    cursor: pointer;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#pause-button{
+    position: absolute;
+    transform: scale(0.4);
+    bottom: 10%;
+    right : 10%;
+    z-index: 1;
+}
+
+#showreel{
+    position: fixed;
+    top:0px;
+    width:100%;
+    opacity: 0.35;
+}
+
+@media (max-width: 640px){
+    #hero-text{
+        font-size: 20px;
+        left: 40%;
+        bottom: 7%;
+        transform: translate(-50%, -50%);
+    }
+
+    #chevron{
+        transform: translate(-50%, -50%) scale(0.1);
+        bottom: -15%;
+        left: 16%;
+    }
+
+    #pause-button{
+        transform: scale(0.3);
+        bottom: 5%;
+
+    }
+    #showreel{
+        width:auto;
+        height: 100%;
+        transform: translate(-38%, 0%);
     }
 }
 
-.hero {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-}
 
-.video{
-    opacity: 0.5;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-}
-
-.greetings{
-    font-family: Montserrat-bold, sans-serif;
-    position: absolute;
-    bottom: 15%;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    font-size: 50px;
-}
-
-.chevron{
+/*On rentre en dessous du reel, début du header*/
+#content{
     position: relative;
-    width: 3%;
-    bottom: 27%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform: scale();
+    top: 100svh;
+    background-color: #ffffff;
 }
 
-.header{
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    position: -webkit-sticky;
+#header {
     position: sticky;
-    padding: 30px 100px;
-    background-color:rgba(0, 0, 0, 0.37);
     top: 0;
+    background-color: #ffffffef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Permet de mettre le header au dessus du reste */
+    backdrop-filter: blur(10px);
+    opacity: 1;
 }
 
-.header a{
+#header-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#header-nav ul li {
+    margin: 40px 60px;
+}
+
+#header a {
+    color: #000000;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+#header a:hover {
+    border-bottom: 1px solid #000000;
+}
+
+#header-nav .active {
+    font-weight: bold;
+}
+
+#home-content-title{
     position: relative;
-    text-decoration: none;
-    color: #ffffff;
-}
-
-.header a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; 
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: #ffffff;
-    transition: width .5s;
-}
-
-
-.header a:hover::after {
-    width: 100%;
-}
-
-#homecontent {
-    position: absolute;
-    top: 100vh;
-    width: 100%;
-    background-color: black;
-}
-
-*{
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-
-.large{
+    font-size:70px;
     text-align: center;
-    font-family: Montserrat-bold, sans-serif;
-    font-size: 80px;
-    margin: 150px;
+    margin: 100px;
 }
 
-.text_1{
-    font-size: 16px;
-    width: 400px;
-    margin: 50px 350px;
+/* Target tout ce qui se situe après le titre du home content */
+#home-content-global{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 16px;
+    grid-row-gap: 120px;
 }
 
-.text_2{
-    font-size: 16px;
-    width: 400px;
-    margin: 50px 100px;
+#home-content-text-1{
+    position: relative;
+    grid-column: 2 / 6 ;
+    margin-top : 60px;
+    grid-row: 1;
 }
+
+.cross-out{
+    text-decoration: line-through;
+}
+
+#home-content-text-2{
+    position: relative;
+    grid-column: 8 / 12 ;
+    grid-row: 2;
+    margin-bottom: 120px;
+}
+
+#footer {
+    position: relative;
+}
+
+@media (max-width: 640px) {
+
+    #header-nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0px 0px;
+        display: flex;
+        justify-content: center;
+    }
+   
+    #header-nav ul li {
+        margin: 40px 20px 0px 20px;
+    }
+
+    #home-content-title{
+        font-size: 35px;
+        margin: 60px 40px;
+    }
+
+    #home-content-global {
+        grid-template-columns: 1fr;
+        grid-row-gap: 60px;
+    }
+
+    #home-content-text-1, #home-content-text-2 {
+        grid-column: 1;
+        margin: 60px;
+        font-size: 16px;
+    }
+}
+
+
+

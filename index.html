@@ -1,65 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" class="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="lib/css/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script defer src="lib/js/script.js" ></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
-    <div id="hero" class="hero">
+<body id="viewport" class="index">
+    <div id=hero>
+        <div id="hero-text">
+            <h1>
+                Hi i'm Ase. <br>
+                Nice to meet you <br>
+            </h1>
+        </div>
+        <div id="chevron">
+            <img src="lib/img/Chevron.png" alt="chevron">
+        </div>
         <div>
-            <video class="video" playsinline muted loop autoplay>
-                <source src="videos/Showreel.mp4" type="video/mp4">
+            <button id="pause-button">
+            <img src="lib/img/pause-button.png" alt="pause-button">
+            </button> 
+        </div>
+        <div id="hero-showreel">
+            <video autoplay muted loop id="showreel">
+                <source src="Videos/Showreel_2.1.mp4" type="video/mp4">
             </video>
         </div>
-        
-        <div id="greetings" class="greetings">
-            Hi, I'm Solal. <br>
-            Nice to meet you. <br>
-        </div>
-        <div class="chevron" style="cursor: pointer;">
-            <img src="lib/img/down-chevron.svg">
-        </div>
-       
-    </div> 
-    <div id="homecontent" class="homecontent">
-        <div class="header">
-            <a href="#">Home</a>
-            <a href="#">Motion</a>
-            <a href="#">Graphic Design</a>
-            <a href="#">Artworks</a>
-            <a href="#">Contact</a>
-            <a href="#">About me</a>
-        </div>
-        <p class="large">
-                I make all kinds <br> of creative stuff.
-        </p>
-        <p class="text_1">
-            Lorem ipsum dolor sit amet, 
-            consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore 
-            et dolore magna aliqua. Ut enim ad minim veniam, 
-            quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure 
-            dolor in reprehenderit in voluptate velit esse 
-            cillum dolore eu fugiat nulla pariatur. 
-        </p>
-        <p class="text_2">
-            Lorem ipsum dolor sit amet, 
-            consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore 
-            et dolore magna aliqua. Ut enim ad minim veniam, 
-            quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure 
-            dolor in reprehenderit in voluptate velit esse 
-            cillum dolore eu fugiat nulla pariatur. 
-        </p>
-        <p id="output"></p>
-
     </div>
-    <script src="lib/js/index.js" defer></script>
+    <div id="content">
+        <div id="header">
+            <div id="header-nav">
+                <ul>
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="#Works">Works</a></li>
+                    <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="Aboutme.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="home-content">
+            <div id="home-content-title" class="hidden">
+                <h2> I make some <br> creative stuff. </h2>
+            </div>
+            <div id="home-content-global">
+                <div id="home-content-text-1" class="hidden">
+                    <p>Hi, I'm <span class="cross-out">Solal</span> Ase. I liked art, so i decided to pursue something related to art. So here, I have a bachelor in graphic and motion design. I'm deeply passionnate about basically, anything that moves, like motion design, and animation. 
+                    I also draw in my spare time. I like 2D, I like 3D, and I'm always curious of techniques and fields to explore</p>
+                </div>
+                <div id="home-content-text-2" class="hidden">
+                    <p>I also like music, I play the piano, and I'm doing my best to stay intersted and up to date in tech stuff. By the way you can check this website's dev's portfolio <span><a href="home-2.html">right here</a></span></p>
+                </div>
+            </div>
+            
+            <div id="footer">
+                <div id="footer-content">
+                    <p> 2024 Solal Zetlaoui</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </body>
 </html>
-
