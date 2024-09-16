@@ -3,18 +3,18 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/main.css';
 
 const work = [
-  { src: "PFE.webp", name: "VANGR PROJET ORCHESTRA", link: "/work/vangr-project-orchestra" },
-  { src: "MA.webp", name: "MARIE ANTOINETTE BOOKTRAILER", link: "/work/marie-antoinette-booktrailer" },
-  { src: "NT.webp", name: "NEOTAPE", link: "/work/neotape" },
-  { src: "RB.webp", name: "ROLLERBALL", link: "/work/rollerball" },
-  { src: "IX.webp", name: "L'HISTOIRE DES CENTAURES", link: "/work/histoire-des-centaures" },
-  { src: "UP.webp", name: "BLOW UP", link: "/work/blow-up" },
-  { src: "VM.webp", name: "DAFT PUNK TRIBUTE", link: "/work/daft-punk-tribute" },
-  { src: "FOX.webp", name: "LANDSCAPE", link: "/work/landscape" },
-  { src: "FLE.webp", name: "FOULES", link: "/work/foules" },
-  { src: "ELE.webp", name: "ELEMENTS", link: "/work/elements" },
-  { src: "RT.webp", name: "RETROTAPE", link: "/work/retrotape" },
-  { src: "BBR.webp", name: "BONBONRAMA", link: "/work/bonbonrama" },
+  { src: "/PFE.webp", name: "VANGR PROJET ORCHESTRA", link: "/work/vangr-project-orchestra" },
+  { src: "/MA.webp", name: "MARIE ANTOINETTE BOOKTRAILER", link: "/work/marie-antoinette-booktrailer" },
+  { src: "/NT.webp", name: "NEOTAPE", link: "/work/neotape" },
+  { src: "/RB.webp", name: "ROLLERBALL", link: "/work/rollerball" },
+  { src: "/IX.webp", name: "THE ORIGIN OF CENTAURS", link: "/work/the-origin-of-centaurs" },
+  { src: "/UP.webp", name: "BLOW UP", link: "/work/blow-up" },
+  { src: "/VM.webp", name: "DAFT PUNK TRIBUTE", link: "/work/daft-punk-tribute" },
+  { src: "/FOX.webp", name: "LANDSCAPE", link: "/work/landscape" },
+  { src: "/FLE.webp", name: "FOULES", link: "/work/foules" },
+  { src: "/ELE.webp", name: "ELEMENTS", link: "/work/elements" },
+  { src: "/RT.webp", name: "RETROTAPE", link: "/work/retrotape" },
+  { src: "/BBR.webp", name: "BONBONRAMA", link: "/work/bonbonrama" },
 ];
 
 const latestwork = work.slice(0, 3);
@@ -23,7 +23,7 @@ const latestwork = work.slice(0, 3);
 <Layout title="Solal Zetlaoui Portfolio" >
     <main>
         <div class="min-width-full h-screen fixed inset-0 flex z-[-2] bg-neutral-950">
-            <video class="w-full h-full object-cover opacity-50" src="Showreel_3.2.mp4" autoplay loop muted>
+            <video class="w-full h-full object-cover opacity-50" src="Showreel_3.2.mp4" autoplay playsinline muted loop>
         </div>
         <div class="fixed bottom-1/4 hero-padding-clamp w-25 z-[-1]">
             <p>
@@ -41,7 +41,7 @@ const latestwork = work.slice(0, 3);
                     <p class="text-hero" >In short,</p>
                     <p class="text-md sm:text-lg py-3"><b> I'm a 23 years old animator and motion designer </b> based in Paris. I&nbsp;have been pursuing courses in motion and graphic design, as well as visual identity and web design. In my spare time, I&nbsp;have been cultivating my <b>skills in animation and illustration</b>. Driven by a <b>keen passion for visual storytelling, I&nbsp;am dedicated to improving my skills and techniques </b> in&nbsp;both 2D and 3D realms.</h3>
                     <div class="my-6 flex flex-col items-center">
-                        <p class=" items-center"><a class ="text-md" href="/about/#more">&#8594; More about me &#8592; </a></p> <p class="mt-6 items-center"><a class="text-md" href="">&#8594; View resume &#8592;</a></p>
+                        <p class=" items-center"><a class ="text-md" href="/about/#more">&#8594; More about me &#8592; </a></p> <p class="mt-6 items-center"><a class="text-md" href="/Resume_CV.pdf" target="_blank">&#8594; View resume &#8592;</a></p>
                     </div>
                 </div>
                 <div class="flex items-center flex-col outline-grid rounded-lg">
