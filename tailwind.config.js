@@ -46,11 +46,25 @@ export default {
       height: {
         '95vh': '95vh',
         '5vh': '5vh',
+        '120': '120%',
+      },
+
+      inset: {
+        '10p': '10%',
+      },
+
+      width: {
+        '300': '300%',
+        '120': '120%',
       },
 
       minHeight: {
         '95vh': '95vh',
         '5vh': '5vh',
+      },
+
+      margin: {
+        '-100': '-100%',
       },
       
       colors: {
