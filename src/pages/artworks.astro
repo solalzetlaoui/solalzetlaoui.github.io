@@ -1,45 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/main.css';
-const work = [
-  { src: "/PFE.webp", name: "VANGR PROJET ORCHESTRA", link: "/work/vangr-project-orchestra" },
-  { src: "/MA.webp", name: "MARIE ANTOINETTE BOOKTRAILER", link: "/work/marie-antoinette-booktrailer" },
-  { src: "/NT.webp", name: "NEOTAPE", link: "/work/neotape" },
-  { src: "/RB.webp", name: "ROLLERBALL 1975 OPENING CREDITS", link: "/work/rollerball" },
-  { src: "/IX.webp", name: "THE ORIGIN OF CENTAURS", link: "/work/the-origin-of-centaurs" },
-  { src: "/UP.webp", name: "BLOW UP", link: "/work/blow-up" },
-  { src: "/VM.webp", name: "DAFT PUNK TRIBUTE", link: "/work/daft-punk-tribute" },
-  { src: "/FOX.webp", name: "LANDSCAPE", link: "/work/landscape" },
-  { src: "/FLE.webp", name: "FOULES", link: "/work/foules" },
-  { src: "/ELE.webp", name: "ELEMENTS", link: "/work/elements" },
-  { src: "/RT.webp", name: "RETROTAPE", link: "/work/retrotape" },
-  { src: "/BBR.webp", name: "BONBONRAMA", link: "/work/bonbonrama" },
-];
 ---
 
 <Layout title="Solal Zetlaoui Portfolio Works Animation & Motion Design" >
   <main>
     <section class="min-h-screen pt-24 bg-neutral-950">
-      <div class="flex items-center justify-around lg:big-padding-clamp">
-        <div><p id="show-animation" class="cursor-pointer py-2 px-3 font-bold outline outline-grid rounded-lg">Animation</p></div>
-        
-        <div><p id="show-artworks" class="cursor-pointer py-2 px-3 opacity-50 outline outline-grid rounded-lg">Artworks</p></div>
-        
-      </div>
-      <div id="animation" class="grid grid-cols-1 common-padding-clamp lg:big-padding-clamp sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {work.map(work => (
-          <div class="relative group">
-            <a href={work.link}>
-                <img src={work.src} class="object-cover rounded-sm" alt={work.name}>
-                <p class="absolute inset-0 px-6 flex items-center justify-center text-primary text-lg bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                  {work.name}
-                </p>
-            </a>
-          </div>
-        ))}
-      </div>
-      <div id="artworks" class="hidden">
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] common-padding-clamp  gap-2 no-right-click">
+        <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] common-padding-clamp  gap-2">
             <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/src/artworks/Scene_1.webp"></div>
             <div class=" sm:col-span-3 sm:row-span-2" ><img class="w-full h-full object-cover" src="/src/artworks/599.webp"></div>
             <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/src/artworks/Background_3.webp"></div>
@@ -81,43 +48,7 @@ const work = [
             <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/src/artworks/kurose.webp"></div>
             <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/src/artworks/Whenever_you_re_ready.webp"></div>
         </div>
-      </div>
     </section>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const showArtworks = document.getElementById('show-artworks');
-        const showAnimation = document.getElementById('show-animation');
-        const artworks = document.getElementById('artworks');
-        const animation = document.getElementById('animation');
-
-        if (showArtworks && showAnimation && artworks && animation) {
-          showArtworks.addEventListener('click', function() {
-            artworks.classList.remove('hidden');
-            animation.classList.add('hidden');
-            showArtworks.classList.add('font-bold');
-            showArtworks.classList.remove('opacity-50');
-            showAnimation.classList.remove('font-bold');
-            showAnimation.classList.add('opacity-50');
-          });
-
-          showAnimation.addEventListener('click', function() {
-            animation.classList.remove('hidden');
-            artworks.classList.add('hidden');
-            showAnimation.classList.add('font-bold');
-            showAnimation.classList.remove('opacity-50');
-            showArtworks.classList.remove('font-bold');
-            showArtworks.classList.add('opacity-50');
-          });
-        }
-
-        // Disable right-click on images
-        const images = document.querySelectorAll('.no-right-click');
-        images.forEach(img => {
-          img.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-          });
-        });
-      });
-    </script>
+    
   </main>
 </Layout>
