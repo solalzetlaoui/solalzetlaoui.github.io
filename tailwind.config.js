@@ -46,7 +46,7 @@ export default {
       height: {
         '95vh': '95vh',
         '5vh': '5vh',
-        '120': '120%',
+        '120': '120vh',
       },
 
       inset: {
