@@ -47,6 +47,7 @@ export default {
         '95vh': '95vh',
         '5vh': '5vh',
         '120': '120vh',
+        '115': '115vh',
       },
 
       inset: {
