@@ -65,7 +65,7 @@ const work = [
             <div class=" sm:col-span-1" ><img class="w-full h-full object-cover" src="/I_SIMPLY_AM_NOT_THERE..webp"></div>
         </div>
       </div>
-      <div id="lab" class="hidden ">
+      <div id="lab" class="hidden">
         <div class="grid grid-cols-1 sm:grid-cols-2 common-padding-clamp lg:big-padding-clamp gap-3 pt-9">
           <div class="sm:col-span-2 text-sm sm:text-md mb-6 ">
             <p class="text-lg"> Welcome to my lab !</p>
@@ -98,6 +98,7 @@ const work = [
           showArtworks.addEventListener('click', function() {
             artworks.classList.remove('hidden');
             animation.classList.add('hidden');
+            lab.classList.add('hidden');
             showArtworks.classList.add('font-bold');
             showArtworks.classList.remove('opacity-50');
             showAnimation.classList.remove('font-bold');
@@ -109,6 +110,7 @@ const work = [
           showAnimation.addEventListener('click', function() {
             animation.classList.remove('hidden');
             artworks.classList.add('hidden');
+            lab.classList.add('hidden');
             showAnimation.classList.add('font-bold');
             showAnimation.classList.remove('opacity-50');
             showArtworks.classList.remove('font-bold');
