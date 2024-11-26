@@ -3,6 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base{
     :root{
         --fs-sm: clamp(0.75rem, 2vw, 1rem); /* Scales between 12px and 16px */
