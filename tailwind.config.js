@@ -17,7 +17,12 @@ export default {
 
         'md': ['clamp(1rem, 2vw, 1.25rem)', {
           fontWeight: '400',
-          lineHeight: 'clamp(1.5rem, 2vw + 1.5rem, 1.95rem)',
+          lineHeight: 'clamp(2rem, 2vw + 2rem, 2.5rem)',
+        }],
+
+        'bmd': ['clamp(1rem, 2vw, 1.25rem)', {
+          fontWeight: '700',
+          lineHeight: 'clamp(2rem, 2vw + 2rem, 2.5rem)',
         }],
 
         'lg': ['clamp(1.5rem, 2vw, 1.75rem)', {
@@ -38,6 +43,8 @@ export default {
         }],
       },
 
+      
+
 
       spacing: {
         'screen': '100vh',
@@ -46,30 +53,17 @@ export default {
       height: {
         '95vh': '95vh',
         '5vh': '5vh',
-        '120': '120vh',
-        '115': '115vh',
-      },
-
-      inset: {
-        '10p': '10%',
-      },
-
-      width: {
-        '300': '300%',
-        '120': '120%',
       },
 
       minHeight: {
         '95vh': '95vh',
         '5vh': '5vh',
       },
-
-      margin: {
-        '-100': '-100%',
-      },
       
       colors: {
         'primary': 'var(--color-primary)',
+        'secondary': 'var(--color-secondary)',
+        'tertiary': 'var(--color-tertiary)',
       },
 
       backgroundImage: {

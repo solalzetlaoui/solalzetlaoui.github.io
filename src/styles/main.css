@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base{
     :root{
         --fs-sm: clamp(0.75rem, 2vw, 1rem); /* Scales between 12px and 16px */
@@ -12,7 +11,10 @@
         --fs-xl: clamp(1.25rem, 2.5vw, 1.5rem); /* Scales between 20px and 24px */
         --fs-2xl: clamp(1.5rem, 2.5vw, 1.75rem); /* Scales between 24px and 28px */
         --fs-3xl: clamp(1.875rem, 1.43vw + 1.5rem, 4rem); /* Scales between 30px and 34px */
-        --color-primary:rgb(253, 252, 238);
+        --color-primary: rgb(253, 252, 238);
+        --color-secondary: hsl(0, 0%, 4%);
+        --color-tertiary: rgb(90, 45, 255);
+        --color-accent: #ecc515; /* Example accent color */
     }
 }
 
@@ -21,6 +23,18 @@
       a {
         font-size: var(--fs-md); /* Scales between 16px and 32px */
         color:rgb(253, 252, 238);
+      }
+
+      /* Example: use another color for a specific class */
+      a.secondary {
+          color: var(--color-secondary);
+      }
+      a.tertiary {
+          color: var(--color-tertiary);
+      }
+
+      a.accent {
+          color: var(--color-accent);
       }
       
       body{
@@ -31,36 +45,29 @@
       }
 
       *{
-        font-family: 'montserrat', sans-serif;
+        font-family: 'Sora', sans-serif;
       }
 
       /* lexend-200 - latin */
-/* montserrat-alternates-200 - latin */
+/* sora-regular - latin */
 @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat Alternates';
-    font-style: normal;
-    font-weight: 200;
-    src: url('montserrat-alternates-v17-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  /* montserrat-alternates-regular - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat Alternates';
-    font-style: normal;
-    font-weight: 400;
-    src: url('montserrat-alternates-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  
-  /* montserrat-alternates-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Montserrat Alternates';
-    font-style: normal;
-    font-weight: 700;
-    src: url('montserrat-alternates-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 400;
+  src: url('sora-v16-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* sora-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Sora';
+  font-style: normal;
+  font-weight: 700;
+  src: url('sora-v16-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
 
   
 
@@ -76,7 +83,9 @@
     .hero-padding-clamp {
         padding-left: clamp(1.5rem, 2.5vw, 5rem); /* Scales between 1rem and 2rem */
     }
-
+    .small-padding-clamp {
+    padding: clamp(0.2rem, 0.5vw, 0.7rem);
+}
     .common-padding-clamp {
         padding: clamp(1.25rem, 2vw + 0.2rem, 3rem); /* Scales between 1.2rem and 8rem */
     }
@@ -86,13 +95,34 @@
         padding-right: 15vw; /* Scales between 1rem and 2rem */
     }
 
+    .very-big-padding-clamp {
+        padding-left: 25vw; /* Scales between 1rem and 2rem */
+        padding-right: 25vw; /* Scales between 1rem and 2rem */
+    }
+
     .outline-grid{
         outline-width: 0.1px;
         outline-style: solid;
         outline-color: #fffde357;
     }
 
+    .textmarker-effect {
+    @apply relative px-2; /* Tailwind for position and padding */
+    }
 
+    .textmarker-effect::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        background: var(--color-tertiary); /* Use the accent color */
+        height: 1.25em; /* Adjust as needed */
+        left: 0;
+        bottom: 0.1em;
+        width: 0%;
+        transition: width 0.5s;
+    }
+    .textmarker-effect:hover::before {
+        width: 100%;
+    }
 
-   
 }

@@ -1,151 +1,75 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/main.css';
-const work = [
-  { src: "/PFE.webp", name: "VANGR PROJET ORCHESTRA", link: "/work/vangr-project-orchestra" },
-  { src: "/MA.webp", name: "MARIE ANTOINETTE BOOKTRAILER", link: "/work/marie-antoinette-booktrailer" },
-  { src: "/NT.webp", name: "NEOTAPE", link: "/work/neotape" },
-  { src: "/RB.webp", name: "ROLLERBALL 1975 OPENING CREDITS", link: "/work/rollerball" },
-  { src: "/IX.webp", name: "THE ORIGIN OF CENTAURS", link: "/work/the-origin-of-centaurs" },
-  { src: "/UP.webp", name: "BLOW UP", link: "/work/blow-up" },
-  { src: "/VM.webp", name: "DAFT PUNK TRIBUTE", link: "/work/daft-punk-tribute" },
-  { src: "/FOX.webp", name: "LANDSCAPE", link: "/work/landscape" },
-  { src: "/FLE.webp", name: "FOULES", link: "/work/foules" },
-  { src: "/ELE.webp", name: "ELEMENTS", link: "/work/elements" },
-  { src: "/RT.webp", name: "RETROTAPE", link: "/work/retrotape" },
-  { src: "/BBR.webp", name: "BONBONRAMA", link: "/work/bonbonrama" },
-];
 ---
 
-<Layout title="Solal Zetlaoui Works" >
-  <main>
-    <section class="min-h-screen pt-24 bg-neutral-950">
-      <div class="flex flex-wrap items-center justify-around lg:big-padding-clamp">
-        <div class="px-3 py-3"><p id="show-animation" class="cursor-pointer py-2 px-3 font-bold outline outline-grid rounded-lg">Animation</p></div>
+<Layout title="Solal Zetlaoui Portfolio Works Animation & Motion Design" >
+	<main>
+        <section class="min-h-screen pt-24 bg-secondary">
+            <div class=" grid grid-cols-1 small-padding-clamp sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="relative group">
+                        <a href="tda-2041">
+                            <img src="TDA ring.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="TDA 2041">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md"><b>TDA 2041</b></p>
+                                <p class="text-primary text-sm">Professional Project</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <a href="vangr-project-orchestra">
+                            <img src="PFE.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="VANGR PROJET ORCHESTRA">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md"><b>Vangr Project Orchestra</b></p>
+                                <p class="text-primary text-sm">Personal Project</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <a href="marie-antoinette-booktrailer">
+                            <img src="MA.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Marie Antoinette Booktrailer">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md "><b>Marie Antoinette</b></p>
+                                <p class="text-primary text-sm">Personal Project</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <a href="neotape">
+                            <img src="NT.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Neotape">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md"><b>Neotape</b></p>
+                                <p class="text-primary text-sm">Personal Project</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <a href="rollerball">
+                            <img src="RB.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Rollerball 1975">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md"><b>Rollerball 1975</b></p>
+                                <p class="text-primary text-sm">Personal Project</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <a href="blow-up">
+                            <img src="UP.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Blow Up">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md"><b>Blow Up</b></p>
+                                <p class="text-primary text-sm">Personal Project</p>
+                            </div>
+                        </a>
+                    </div>
+            </div>        
+        </section>
         
-        <div class="px-3 py-3"><p id="show-artworks" class="cursor-pointer py-2 px-3 opacity-50 outline outline-grid rounded-lg">Artworks</p></div>
-
-        <div class="px-3 py-3"><p id="show-lab" class="cursor-pointer py-2 px-3 opacity-50 outline outline-grid rounded-lg">Lab</p></div>
-        
-      </div>
-      <div id="animation" class="grid grid-cols-1 common-padding-clamp lg:big-padding-clamp sm:grid-cols-2 lg:grid-cols-3 gap-3">
-        {work.map(work => (
-          <div class="relative group">
-            <a href={work.link}>
-                <img src={work.src} class="object-cover rounded-sm" alt={work.name}>
-                <p class="absolute inset-0 px-6 flex items-center justify-center text-primary text-lg bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                  {work.name}
-                </p>
-            </a>
-          </div>
-        ))}
-      </div>
-      <div id="artworks" class="hidden lg:big-padding-clamp">
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] common-padding-clamp  gap-2 no-right-click">
-          <div class="  sm:col-span-2 sm:row-span-1" ><img class="w-full h-full object-cover" src="/Background_16_8_sdown.jpg"></div>
-          <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/Background_14.jpg"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/Background_3.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/Background_4.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/Background_5.webp"></div>
-        </div>
-
-        <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] common-padding-clamp  gap-2 no-right-click">
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/606.JPG"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/607.JPG"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/605.JPG"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/603.JPG"></div>
-            <div class=" sm:col-span-2 sm:row-span-1" ><img class="w-full h-full object-cover" src="/599.webp"></div>
-            <div class=" sm:col-span-2 sm:row-span-1" ><img class="w-full h-full object-cover" src="/600.webp"></div>
-            <div class=" sm:col-span-2 sm:row-span-1" ><img class="w-full h-full object-cover" src="/564.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/589.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/Illustration_sans_titre.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/591.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/587.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/582.webp"></div>
-
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/✨gleaming✨.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/598.webp"></div>
-            <div class=" sm:row-span-1" ><img class="w-full h-full object-cover" src="/572.webp"></div>
-            <div class=" sm:col-span-1" ><img class="w-full h-full object-cover" src="/I_SIMPLY_AM_NOT_THERE..webp"></div>
-        </div>
-      </div>
-      <div id="lab" class="hidden">
-        <div class="grid grid-cols-1 sm:grid-cols-2 common-padding-clamp lg:big-padding-clamp gap-3 pt-9">
-          <div class="sm:col-span-2 text-sm sm:text-md mb-6 ">
-            <p class="text-lg"> Welcome to my lab !</p>
-
-              <br><br>I'm currently self-teaching 2D and 3D animation, and the work shared here is experimental, reflecting my ongoing learning process. I use a variety of softwares, including Clip Studio Paint, Toon Boom Harmony, Storyboard Pro, Blender, DaVinci Resolve, and After Effects.
-
-              <br><br>My goal is to grasp the fundamentals or become proficient in all aspects of animation. That includes storyboarding, character design, background design, composition, layout, animating, rigging, modeling, compositing, sound design, and editing.
-
-              <br><br>While I've had the opportunity to practice some of these skills during my motion design studies, many of them I've had to learn from scratch. Currently, my work consists mainly of exercises and studies. However, I am also working on a short film that will allow me to apply everything I have learned so far, while challenging my weaknesses and pushing me to grow as an artist.
-          </div>
-          <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/ovnZnaijiZM?si=J1CVkeQNe4QHw1TJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          
-          <iframe class="aspect-video w-full " src="https://www.youtube.com/embed/X9HQ1Q6PU9Q?si=rRg54HDuPEVKpMCj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        
-          <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/eT0XEW3E7CE?si=XvtnGBJWU2A2dXYR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-          <iframe class="aspect-video w-full" src="https://www.youtube.com/embed/YBcuvcRzSoc?si=YV3x0PInLbyVMq1S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-      </div>
-    </section>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const showArtworks = document.getElementById('show-artworks');
-        const showAnimation = document.getElementById('show-animation');
-        const showLab = document.getElementById('show-lab');
-        const artworks = document.getElementById('artworks');
-        const animation = document.getElementById('animation');
-        const lab = document.getElementById('lab');
-        
-
-        if (showArtworks && showAnimation && showLab && artworks && animation && lab) {
-          showArtworks.addEventListener('click', function() {
-            artworks.classList.remove('hidden');
-            animation.classList.add('hidden');
-            lab.classList.add('hidden');
-            showArtworks.classList.add('font-bold');
-            showArtworks.classList.remove('opacity-50');
-            showAnimation.classList.remove('font-bold');
-            showAnimation.classList.add('opacity-50');
-            showLab.classList.remove('font-bold');
-            showLab.classList.add('opacity-50');
-          });
-
-          showAnimation.addEventListener('click', function() {
-            animation.classList.remove('hidden');
-            artworks.classList.add('hidden');
-            lab.classList.add('hidden');
-            showAnimation.classList.add('font-bold');
-            showAnimation.classList.remove('opacity-50');
-            showArtworks.classList.remove('font-bold');
-            showArtworks.classList.add('opacity-50');
-            showLab.classList.remove('font-bold');
-            showLab.classList.add('opacity-50');
-          });
-
-          showLab.addEventListener('click', function() {
-            animation.classList.add('hidden');
-            artworks.classList.add('hidden');
-            lab.classList.remove('hidden');
-            showAnimation.classList.remove('font-bold');
-            showAnimation.classList.add('opacity-50');
-            showArtworks.classList.remove('font-bold');
-            showArtworks.classList.add('opacity-50');
-            showLab.classList.add('font-bold');
-            showLab.classList.remove('opacity-50');
-          });
-        }
-
-        // Disable right-click on images
-        const images = document.querySelectorAll('.no-right-click');
-        images.forEach(img => {
-          img.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-          });
-        });
-      });
-    </script>
-  </main>
+	</main>
 </Layout>
+

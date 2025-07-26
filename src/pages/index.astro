@@ -1,71 +1,76 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/main.css';
-
-const work = [
-  { src: "/PFE.webp", name: "VANGR PROJET ORCHESTRA", link: "/work/vangr-project-orchestra" },
-  { src: "/MA.webp", name: "MARIE ANTOINETTE BOOKTRAILER", link: "/work/marie-antoinette-booktrailer" },
-  { src: "/NT.webp", name: "NEOTAPE", link: "/work/neotape" },
-  { src: "/RB.webp", name: "ROLLERBALL", link: "/work/rollerball" },
-  { src: "/IX.webp", name: "THE ORIGIN OF CENTAURS", link: "/work/the-origin-of-centaurs" },
-  { src: "/UP.webp", name: "BLOW UP", link: "/work/blow-up" },
-  { src: "/VM.webp", name: "DAFT PUNK TRIBUTE", link: "/work/daft-punk-tribute" },
-  { src: "/FOX.webp", name: "LANDSCAPE", link: "/work/landscape" },
-  { src: "/FLE.webp", name: "FOULES", link: "/work/foules" },
-  { src: "/ELE.webp", name: "ELEMENTS", link: "/work/elements" },
-  { src: "/RT.webp", name: "RETROTAPE", link: "/work/retrotape" },
-  { src: "/BBR.webp", name: "BONBONRAMA", link: "/work/bonbonrama" },
-];
-
-const latestwork = work.slice(0, 3);
 ---
 
-<Layout title="Solal Zetlaoui" >
+<Layout title="Solal Zetlaoui Portfolio" >
     <main>
-        <div class="min-width-full h-screen fixed inset-0 flex z-[-2] bg-neutral-950">
-            <video class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover h-full sm:h-120 aspect-video pointer-events-none"  loop="loop" playsinline="" muted="true" autoplay="autoplay" title="Showreel_3.1">
-                <source src="/showreel_shortened_2.1.mp4">
-            </video>   
+        <div class="min-width-full h-screen fixed inset-0 flex z-[-2] bg-secondary">
+            <video class="w-full h-full object-cover opacity-85" src="/showreel_shortened_2.1.mp4" autoplay loop muted>
         </div>
         <div class="fixed bottom-1/4 hero-padding-clamp w-25 z-[-1]">
             <p>
-                <span class="block text-hero">Hi, I'm Solal.</span>
+                <span class="block text-hero ">Hi, I'm Solal.</span>
                 <span class="block text-hero">Nice to meet you.</span>
             </p>
         </div>
-        <a class="fixed bottom-10 left-1/2 fill-primary z-[-1]" href="#content"><svg class="w-12 h-12  transform -translate-x-1/2" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.28 56.78">
+        <a class="fixed bottom-10 left-1/2 fill-primary hover:fill-tertiary transition-colors duration-300 z-[-1] cursor-pointer" id="chevron"><svg class="w-12 h-12  transform -translate-x-1/2" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.28 56.78">
             <path class="cls-1" d="M49.65,56.78L1.52,7.54C-.54,5.43-.5,2.06,1.61,0h0s44.17,45.25,44.17,45.25c2.98,3.05,4.4,7.3,3.87,11.53h0Z"/>
             <path class="cls-1" d="M49.65,56.76L97.76,7.54c2.06-2.11,2.02-5.48-.09-7.54h0s-44.18,45.26-44.18,45.26c-2.97,3.05-4.39,7.28-3.85,11.5h0Z"/>
           </svg></a>		
-        <section id="content" class="bg-neutral-950 mt-screen z-0 relative min-h-screen ">
-            <div class="pt-20 grid grid-cols-1 common-padding-clamp">
-                <div class="py-12 sm:big-padding-clamp">
-                    <p class="text-hero" >In short,</p>
-                    <p class="text-md sm:text-lg py-3"><b> I'm a 23 years old animator and motion designer </b> based in Paris. I&nbsp;have been pursuing courses in motion and graphic design, as well as visual identity and web design. In my spare time, I&nbsp;have been cultivating my <b>skills in animation and illustration</b>. Driven by a <b>keen passion for visual storytelling, I&nbsp;am dedicated to improving my skills and techniques </b> in&nbsp;both 2D and 3D realms.</h3>
-                    <div class="my-6 flex flex-col items-center">
-                        <p class=" items-center"><a class ="text-md" href="/about/#more">&#8594; More about me &#8592; </a></p> <p class="mt-6 items-center"><a class="text-md" href="/Resume_CV.pdf" target="_blank">&#8594; View resume &#8592;</a></p>
+        <section id="content" class="bg-secondary mt-screen z-0 relative min-h-screen ">
+            <div class=" grid grid-cols-1">
+                <div class="py-12 sm:very-big-padding-clamp">
+                    <div class="common-padding-clamp">
+                        <p class="text-md "><b> I'm an animator and motion designer </b> based in Paris. I am self taught in <b> animation and illustration</b>. Driven by a <b>keen passion for visual storytelling, I&nbsp;am dedicated to improving my skills and techniques</b>, especially in 2D.</h3>
+                        <p><a class ="text-bmd textmarker-effect" href="/about">&#8594; More about me &#8592; </a></p>
                     </div>
-                </div>
-                <div class="flex items-center flex-col outline-grid rounded-lg">
-                    <p class="common-padding-clamp text-xl w-full ">Latest works</p>
-                    <div class="grid md:grid-cols-3 gap-3 pt-0 common-padding-clamp w-full">
-                        {latestwork.map(work => (
-                            <div class="relative group">
-                                <a href={work.link}>
-                                    <img src={work.src} class="w-full h-auto rounded-sm" alt={work.name}>
-                                    <p class="absolute inset-0 px-6 flex items-center justify-center text-primary text-lg bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                                        {work.name}
-                                    </p>
-                                </a>
+                     </div>
+                <div class=" grid grid-cols-1 small-padding-clamp sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="relative group">
+                        <a href="tda-2041">
+                            <img src="TDA ring.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="TDA 2041">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md"><b>TDA 2041</b></p>
+                                <p class="text-primary text-sm">Professional Project</p>
                             </div>
-                        ))}
+                        </a>
                     </div>
-                    <p class="text-md items-center common-padding-clamp pt-0"><a href="/works">&#8594; See all my works &#8592; </a></p>
+                    <div class="relative group">
+                        <a href="vangr-project-orchestra">
+                            <img src="PFE.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="VANGR PROJET ORCHESTRA">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md"><b>Vangr Project Orchestra</b></p>
+                                <p class="text-primary text-sm">Personal Project</p>
+                            </div>
+                        </a>
+                    </div>
+                <div class="relative group">
+                    <a href="marie-antoinette-booktrailer">
+                            <img src="MA.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Marie Antoinette Booktrailer">
+                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-primary text-md "><b>Marie Antoinette</b></p>
+                                <p class="text-primary text-sm">Personal Project</p>
+                            </div>
+                    </a>
                 </div>
-
-            </div>
+                    
             
         </section>
-
     </main>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.getElementById('chevron');
+    const target = document.getElementById('content');
+    if (btn && target) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+</script>
 </Layout>
