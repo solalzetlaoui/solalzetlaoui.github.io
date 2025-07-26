@@ -1,0 +1,29 @@
+---
+const work = [
+  { src: "PFE.webp", name: "VANGR PROJET ORCHESTRA", link: "/work/vangr-project-orchestra" },
+  { src: "MA.webp", name: "MARIE ANTOINETTE BOOKTRAILER", link: "/work/marie-antoinette-booktrailer" },
+  { src: "NT.webp", name: "NEOTAPE", link: "/work/neotape" },
+  { src: "RB.webp", name: "ROLLERBALL 1975 OPENING CREDITS", link: "/work/rollerball" },
+  { src: "IX.webp", name: "THE ORIGIN OF CENTAURS", link: "/work/the-origin-of-centaurs" },
+  { src: "UP.webp", name: "BLOW UP", link: "/work/blow-up" },
+  { src: "VM.webp", name: "DAFT PUNK TRIBUTE", link: "/work/daft-punk-tribute" },
+  { src: "FOX.webp", name: "LANDSCAPE", link: "/work/landscape" },
+  { src: "FLE.webp", name: "FOULES", link: "/work/foules" },
+  { src: "ELE.webp", name: "ELEMENTS", link: "/work/elements" },
+  { src: "RT.webp", name: "RETROTAPE", link: "/work/retrotape" },
+  { src: "BBR.webp", name: "BONBONRAMA", link: "/work/bonbonrama" },
+];
+---
+
+<div class=" grid grid-cols-1 common-padding-clamp lg:big-padding-clamp sm:grid-cols-2 lg:grid-cols-3 gap-3">
+  {work.map(project => (
+    <div class="relative group">
+      <a href={project.link}>
+        <img src={project.src} class="w-full h-auto rounded-sm" alt={project.name}>
+        <p class="absolute inset-0 px-6 flex items-center justify-center text-primary text-lg bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+          {project.name}
+        </p>
+      </a>
+    </div>
+  ))}
+</div>

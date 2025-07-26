@@ -1,75 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/main.css';
+import Project_list from '../components/Project_list.astro';
 ---
 
 <Layout title="Solal Zetlaoui Portfolio Works Animation & Motion Design" >
 	<main>
-        <section class="min-h-screen pt-24 bg-secondary">
-            <div class=" grid grid-cols-1 small-padding-clamp sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    <div class="relative group">
-                        <a href="tda-2041">
-                            <img src="TDA ring.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="TDA 2041">
-                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
-                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <p class="text-primary text-md"><b>TDA 2041</b></p>
-                                <p class="text-primary text-sm">Professional Project</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="relative group">
-                        <a href="vangr-project-orchestra">
-                            <img src="PFE.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="VANGR PROJET ORCHESTRA">
-                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
-                            <div class="absolute inset-0 p-4 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <p class="text-primary text-md"><b>Vangr Project Orchestra</b></p>
-                                <p class="text-primary text-sm">Personal Project</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="relative group">
-                        <a href="marie-antoinette-booktrailer">
-                            <img src="MA.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Marie Antoinette Booktrailer">
-                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
-                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <p class="text-primary text-md "><b>Marie Antoinette</b></p>
-                                <p class="text-primary text-sm">Personal Project</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="relative group">
-                        <a href="neotape">
-                            <img src="NT.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Neotape">
-                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
-                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <p class="text-primary text-md"><b>Neotape</b></p>
-                                <p class="text-primary text-sm">Personal Project</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="relative group">
-                        <a href="rollerball">
-                            <img src="RB.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Rollerball 1975">
-                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
-                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <p class="text-primary text-md"><b>Rollerball 1975</b></p>
-                                <p class="text-primary text-sm">Personal Project</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="relative group">
-                        <a href="blow-up">
-                            <img src="UP.webp" class="w-full h-auto rounded-sm group-hover:outline group-hover:outline-1 group-hover:outline-tertiary" alt="Blow Up">
-                            <video src="PFE-preview.mp4" class="w-full h-auto rounded-sm absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"autoplay muted loop playsinline></video> 
-                            <div class="absolute inset-0 p-4 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                <p class="text-primary text-md"><b>Blow Up</b></p>
-                                <p class="text-primary text-sm">Personal Project</p>
-                            </div>
-                        </a>
-                    </div>
-            </div>        
+        <section class="min-h-screen pt-24 bg-neutral-950">
+            <Project_list />
         </section>
         
 	</main>
 </Layout>
-
