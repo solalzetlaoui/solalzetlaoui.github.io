@@ -1,16 +1,18 @@
 ---
-// Use public assets for GitHub Pages compatibility
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
 ---
 
 <div id="container">
-	<img id="background" src="/background.svg" alt="" fetchpriority="high" />
+	<img id="background" src={background.src} alt="" fetchpriority="high" />
 	<main>
 		<section id="hero">
 			<a href="https://astro.build"
-				><img src="/astro.svg" width="115" height="48" alt="Astro Homepage" /></a
+				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
 			>
 			<h1>
 				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
+				Incoming website.
 			</h1>
 			<section id="links">
 				<a class="button" href="https://docs.astro.build">Read our docs</a>
