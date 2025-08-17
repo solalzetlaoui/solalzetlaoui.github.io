@@ -1,0 +1,90 @@
+
+@import "tailwindcss";
+
+/* space-grotesk-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/space-grotesk-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* space-grotesk-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/space-grotesk-v21-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@layer base{
+
+      a {
+        font-size: var(--text-md); /* Scales between 16px and 32px */
+        color:rgb(253, 252, 238);
+      }
+      
+      body{
+        color:rgb(253, 252, 238);
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+
+      *{
+        font-family: 'space grotesk', sans-serif;
+      }
+    }
+
+@theme {
+  --text-xsm: clamp(0.75rem, 2vw, 1rem);
+  --text-xsm--font-weight: 400;
+  --text-sm: clamp(0.875rem, 2vw, 1.125rem);
+  --text-sm--font-weight: 400;
+  --text-md: clamp(1rem, 2vw, 1.25rem);
+  --text-md--font-weight: 400;
+  --text-lg: clamp(1.5rem, 2vw, 1.75rem);
+  --text-lg--font-weight: 400;
+  --text-xl: clamp(1.5rem, 2vw, 2rem);
+  --text-2xl: clamp(2rem, 2vw + 1.5rem, 3rem);
+  --text-hero: clamp(2rem, 2vw + 1.5rem, 8rem);
+  --text-hero--font-weight: 700;
+
+  --color-primary:rgb(253, 252, 238);
+  --color-secondary:rgb(90, 45, 255);
+  --color-tertiary:rgb(10, 10, 10);
+  
+  --spacing-screen: 100vh ;
+  --spacing-cpc: clamp(1.25rem, 2vw + 0.2rem, 3rem); /*common padding clamp -- between 1.25 and 3 rem*/
+  --spacing-bpc: 15vw; /*bpc, 15vw*/
+  --spacing-vbpc: 25vw;/*bpc, 25vw*/
+  --spacing-hmc: clamp(1.5rem, 2.5vw, 5rem); /* Scales between 1rem and 2rem */
+  --spacing-svgsize: clamp(1rem, 2vw + 1rem, 2rem);
+}
+
+
+    
+.outline-grid{
+    outline-width: 0.1px;
+    outline-style: solid;
+    outline-color: #fffde357;
+    }
+.textmarker-effect {
+    position: relative;
+    }
+.textmarker-effect::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: var(--color-secondary); /* Use the accent color */
+    height: 1.25em; /* Adjust as needed */
+    left: 0;
+    bottom: 0.1em;
+    width: 0%;
+    transition: width 0.5s;
+    }
+.textmarker-effect:hover::before {
+    width: 100%;
+    }

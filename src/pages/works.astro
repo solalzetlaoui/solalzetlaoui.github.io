@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Solal Zetlaoui Portfolio">
+    <main>
+        <section class="min-h-screen pt-24 bg-tertiary">
+            <div class=" grid grid-cols-1 px-cpc sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="relative group">
+                        <a href="tda-2041">
+                            <img src="TDA ring.webp" class="w-full h-auto" alt="TDA 2041">
+                            <video src="showreel_shortened_2.1.mp4" class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1">
+                                <p class="text-primary text-md"><b>TDA 2041</b></p>
+                                <p class="text-primary text-xsm/3">Professional Project</p>
+                            </div>
+                            <div class="absolute inset-0 p-4 bg-secondary bg-opacity-70 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <a href="marie-antoinette">
+                            <img src="MA.webp" class="w-full h-auto" alt="Marie Antoinette">
+                            <video src="showreel_shortened_2.1.mp4" class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1">
+                                <p class="text-primary text-md"><b>Marie Antoinette</b></p>
+                                <p class="text-primary text-xsm/3">Personal Project</p>
+                            </div>
+                            <div class="absolute inset-0 p-4 bg-secondary bg-opacity-70 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <a href="vangr">
+                            <img src="PFE.webp" class="w-full h-auto" alt="Vangr Project">
+                            <video src="showreel_shortened_2.1.mp4" class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1">
+                                <p class="text-primary text-md"><b>Vangr Project</b></p>
+                                <p class="text-primary text-xsm/3">Personal Project</p>
+                            </div>
+                            <div class="absolute inset-0 p-4 bg-secondary bg-opacity-70 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <a href="rollerball">
+                            <img src="RB.webp" class="w-full h-auto" alt="Rollerball Opening Credits">
+                            <video src="showreel_shortened_2.1.mp4" class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" muted loop playsinline></video> 
+                            <div class="absolute inset-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1">
+                                <p class="text-primary text-md"><b>Rollerball 1975</b></p>
+                                <p class="text-primary text-xsm/3">Personal Project</p>
+                            </div>
+                            <div class="absolute inset-0 p-4 bg-secondary bg-opacity-70 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0">
+                            </div>
+                        </a>
+                    </div> 
+            </div>
+        </section>
+        
+    </main>
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                document.querySelectorAll('.group').forEach(group => {
+                    const video = group.querySelector('.video');
+                    if (!video) return;
+                    group.addEventListener('mouseenter', () => {
+                        video.play();
+                    });
+                    group.addEventListener('mouseleave', () => {
+                        video.pause();
+                        video.currentTime = 0;
+                    });
+                });
+            });
+    </script>
+</Layout>
