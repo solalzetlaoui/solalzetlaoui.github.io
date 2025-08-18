@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import { Image } from 'astro.assets' ;
+import NT from "../assets/NT.png"; 
 ---
 
 <Layout title="Solal Zetlaoui Portfolio">
@@ -9,7 +11,7 @@ import '../styles/global.css';
             <div class=" grid grid-cols-1 px-cpc sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     <div class="relative group">
                         <a href="tda-2041">
-                            <img src="../assets/TDA.webp" class="w-full h-auto" alt="TDA 2041">
+                            <img src="/TDA.webp" class="w-full h-auto" alt="TDA 2041">
                             <video src="showreel_shortened_2.1.mp4" class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" muted loop playsinline></video> 
                             <div class="absolute inset-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1">
                                 <p class="text-primary text-md"><b>TDA 2041</b></p>
@@ -45,7 +47,7 @@ import '../styles/global.css';
                     </div>
                     <div class="relative group">
                         <a href="rollerball">
-                            <img src="RB.webp" class="w-full h-auto" alt="Rollerball Opening Credits">
+                            <img src="/RB.webp" class="w-full h-auto" alt="Rollerball Opening Credits">
                             <video src="showreel_shortened_2.1.mp4" class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" muted loop playsinline></video> 
                             <div class="absolute inset-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1">
                                 <p class="text-primary text-md"><b>Rollerball 1975</b></p>
@@ -57,7 +59,10 @@ import '../styles/global.css';
                     </div> 
             </div>
             <div>
-                <img src="NT.png">
+                <img src="/NT.png" alt="image png with /">
+            </div>
+            <div>
+                <Image src={NT} alt="NT with astro import"
             </div>
         </section>
         
