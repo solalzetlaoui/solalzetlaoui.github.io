@@ -1,0 +1,24 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from 'astro:assets';
+
+interface Props {
+    title: string;
+    context: string;
+    videoUrl: string;
+    credits: string;
+}
+
+const {title, context, videoUrl, credits} = Astro.props;
+---
+
+<div class="px:bpc sm:px-bpc">
+    <p class="text-primary text-xl">{title}</p>
+    <p class="text-primary text-md">{context}</p>
+    <div class="my-6">
+        <iframe class="aspect-video w-full" src={videoUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="text-primary text-md font-bold">Credits :</p>
+    <p class="text-primary text-sm ">{credits}</p>
+    
+</div>

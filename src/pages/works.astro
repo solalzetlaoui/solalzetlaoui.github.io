@@ -4,34 +4,71 @@ import '../styles/global.css';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Solal Zetlaoui Portfolio">
+<Layout title="Works">
     <main>
-        <section class="min-h-screen pt-24 bg-tertiary">
-            <div class=" grid grid-cols-1 px-cpc sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                    <div class="relative group">
-                        <a href="tda-2041">
-                            <img src="/TDA.webp" class="w-full h-auto" alt="TDA 2041">
-                            <video src="showreel_shortened_2.1.mp4" class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300" muted loop playsinline></video> 
-                            <div class="absolute inset-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1">
-                                <p class="text-primary text-md"><b>TDA 2041</b></p>
-                                <p class="text-primary text-xsm/3">Professional Project</p>
-                            </div>
-                            <div class="absolute inset-0 p-4 bg-secondary bg-opacity-70 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0">
-                            </div>
-                        </a>
-                    </div>
- 
+        <section class="min-h-screen pt-24">
+            <div class="grid grid-cols-1 px-cpc sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-5 gap-3 ">
                     <div class="relative">
-                        <a href="neotape">
+                        <a href="/TDA_2041">
+                            <Card 
+                            imagePath="/src/assets/TDA.webp"
+                            videoPath="/00_PREVIEW_TDA.mov"
+                            altText="TDA 2041"
+                            title="TDA 2041"
+                            context="Professional Project"
+                            type="Animation"/>
+                        </a>
+
+                    </div>
+                    <div class="relative">
+                        <a href="/neotape">
                             <Card 
                             imagePath="/src/assets/NT.webp"
-                            videoPath="/showreel_shortened_2.1.mp4"
+                            videoPath="/00_PREVIEW_NT.mov"
                             altText="Neotape"
                             title="Neotape"
-                            context="Personal Project"/>
+                            context="Personal Project"
+                            type="Motion Design"/>
                         </a>
                     
                     </div>
+                    <div class="relative">
+                        <a href="Vangr_Project">
+                            <Card 
+                            imagePath="/src/assets/PFE.webp"
+                            videoPath="/00_PREVIEW_PFE.mov"
+                            altText="Vangr Project"
+                            title="Vangr Project"
+                            context="Personal Project"
+                            type="Animation"/>
+                        </a>
+                    
+                    </div>
+                    <div class="relative">
+                        <a href="Marie_Antoinette">
+                            <Card 
+                            imagePath="/src/assets/MA.webp"
+                            videoPath="/00_PREVIEW_MA.mov"
+                            altText="Marie Antoinette"
+                            title="Marie Antoinette"
+                            context="Personal Project"
+                            type="Animation"/>
+                        </a>
+                    
+                    </div>
+                    <div class="relative">
+                        <a href="Rollberball">
+                            <Card 
+                            imagePath="/src/assets/RB.webp"
+                            videoPath="/00_PREVIEW_RB.mov"
+                            altText="Rollerball"
+                            title="Rollerball"
+                            context="Personal Project"
+                            type="Motion Design"/>
+                        </a>
+                    
+                    </div>
+            </div>
         </section>
     </main>
     <script>

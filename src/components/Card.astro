@@ -8,9 +8,10 @@ interface Props {
     altText: string;
     title: string;
     context: string;
+    type:string;
 }
 
-const { imagePath, videoPath, altText, title, context} = Astro.props;
+const { imagePath, videoPath, altText, title, context, type} = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata}>('/src/assets/*.(webp)')
 if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{webp}"`);
 ---
@@ -20,10 +21,11 @@ if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: 
 <div class="group">
     <Image src={images[imagePath]()} alt={altText} />
         <video src={videoPath} class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1" muted loop playsinline></video> 
-        <div class="absolute inset-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-2">
+        <div class="absolute inset-0 pl-3 pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-2">
             <p class="text-primary text-md"><b>{title}</b></p>
-            <p class="text-primary text-xsm/3">{context}</p>
-            <div class="absolute inset-0 p-4 bg-secondary bg-opacity-70 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0">
+            <p class="text-primary text-xsm font-bold">{context}</p>
+            <p class="text-primary text-xsm">{type}</p>
+            <div class="absolute inset-0 bg-secondary bg-opacity-70 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0">
             </div>
         </div>
 </div>

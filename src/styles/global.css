@@ -62,6 +62,8 @@
   --spacing-vbpc: 25vw;/*bpc, 25vw*/
   --spacing-hmc: clamp(1.5rem, 2.5vw, 5rem); /* Scales between 1rem and 2rem */
   --spacing-svgsize: clamp(1rem, 2vw + 1rem, 2rem);
+
+  --breakpoint-3xl: 110rem;
 }
 
 
