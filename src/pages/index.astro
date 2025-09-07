@@ -5,15 +5,16 @@ import '../styles/global.css';
 
 <Layout title="Solal Zetlaoui Portfolio">
     <main>
-        <div class="min-width-full h-screen fixed inset-0 flex z-[-2] bg-tertiary">
-            <video class="w-full h-full object-cover opacity-50" src="/showreel_shortened_2.1.mp4" autoplay loop muted></video>
+        <div class="min-width-full h-screen fixed inset-0 flex z-[-3] bg-tertiary">
+            <video class="w-full h-full object-cover opacity-80" src="/showreel_shortened_2.1.mp4" autoplay loop muted playsinline></video>
         </div>
-        <div class="fixed bottom-1/4 pl-hmc z-[-1]">
+        <div class="fixed bottom-1/4 pl-hmc z-[-2]">
             <p>
                 <span class="block text-hero">Hi, I'm Solal.</span>
                 <span class="block text-hero">Nice to meet you.</span>
             </p>
         </div>
+        
         <a class="fixed bottom-10 left-1/2 fill-primary hover:fill-secondary transition-colors duration-300 z-[-1] cursor-pointer" id="chevron"><svg class="w-12 h-12  transform -translate-x-1/2" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99.28 56.78">
             <path class="cls-1" d="M49.65,56.78L1.52,7.54C-.54,5.43-.5,2.06,1.61,0h0s44.17,45.25,44.17,45.25c2.98,3.05,4.4,7.3,3.87,11.53h0Z"/>
             <path class="cls-1" d="M49.65,56.76L97.76,7.54c2.06-2.11,2.02-5.48-.09-7.54h0s-44.18,45.26-44.18,45.26c-2.97,3.05-4.39,7.28-3.85,11.5h0Z"/>
@@ -43,6 +44,7 @@ import '../styles/global.css';
     
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scroll for chevron
     const btn = document.getElementById('chevron');
     const target = document.getElementById('content');
     if (btn && target) {
