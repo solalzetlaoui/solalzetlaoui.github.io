@@ -81,9 +81,10 @@ import Card from '../components/Card.astro';
                     });
                     group.addEventListener('mouseleave', () => {
                         video.pause();
-                        video.currentTime = 0;
+                        setTimeout(() => {
+                            video.currentTime = 0;
+                    }, 150);})
                     });
                 });
-            });
     </script>
 </Layout>
