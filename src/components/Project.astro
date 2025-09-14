@@ -3,7 +3,7 @@ interface Props {
     title: string;
     context: string;
     videoUrl: string;
-    credits: string;
+    credits: string[];
     previousUrl: string;
     nextUrl: string
 }
@@ -15,9 +15,12 @@ const {title, context, videoUrl, credits, previousUrl, nextUrl} = Astro.props;
     <p class="text-primary text-xl font-bold">Project : {title}</p>
     <p class="text-primary text-md">{context}</p>
     <div class="my-6">
-        <iframe class="aspect-video w-full" src={videoUrl} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <lite-youtube style="max-width:100%;aspect-ratio:16/9;" videoid={videoUrl}></lite-youtube>
+        
     </div>
-    <p class="text-primary text-sm ">{credits}</p>
+    <ul class="text-primary text-xsm ">
+        {credits.map(line => <li class="pt-1">{line}</li>)}
+    </ul>
     <div class="my-6 flex justify-between ">
         <a href={previousUrl} class="text-md textmarker-effect cursor-pointer">&#8592; Previous</a>
         <a href={nextUrl} class="text-md textmarker-effect cursor-pointer">Next &#8594;</a>

@@ -23,11 +23,11 @@
 
       a {
         font-size: var(--text-md); /* Scales between 16px and 32px */
-        color:rgb(253, 252, 238);
+        color:rgb(247, 247, 243);
       }
       
       body{
-        color:rgb(253, 252, 238);
+        color:rgb(247, 247, 243);
       }
       html{
         scroll-behavior: smooth;
@@ -54,7 +54,7 @@
   --text-hero: clamp(2rem, 2vw + 1.5rem, 8rem);
   --text-hero--font-weight: 700;
 
-  --color-primary:rgb(253, 252, 238);
+  --color-primary:rgb(247, 247, 243);
   --color-secondary:rgb(90, 45, 255);
   --color-tertiary:rgb(10, 10, 10);
   
