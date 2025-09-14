@@ -1,5 +1,6 @@
 
 @import "tailwindcss";
+@import "lite-youtube-embed/src/lite-yt-embed.css";
 
 /* space-grotesk-regular - latin */
 @font-face {
