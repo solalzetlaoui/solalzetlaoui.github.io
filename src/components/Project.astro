@@ -9,15 +9,18 @@ interface Props {
 }
 
 const {title, context, videoUrl, credits, previousUrl, nextUrl} = Astro.props;
+import { YouTube } from '@astro-community/astro-embed-youtube';
 ---
 
 <div class="px:bpc sm:px-bpc">
     <p class="text-primary text-xl font-bold">Project : {title}</p>
     <p class="text-primary text-md">{context}</p>
     <div class="my-6">
-            <lite-youtube style="max-width:100%;aspect-ratio:16/9;" videoid={videoUrl}></lite-youtube>
-        
-    </div>
+  <div class="my-6">
+  <div class="w-full aspect-video">
+    <YouTube id={videoUrl} class="!max-w-full" posterQuality="high"/>
+  </div>
+</div>
     <ul class="text-primary text-xsm ">
         {credits.map(line => <li class="pt-1">{line}</li>)}
     </ul>
