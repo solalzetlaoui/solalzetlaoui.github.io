@@ -15,7 +15,7 @@ const {title, context, videoUrl, credits, previousUrl, nextUrl} = Astro.props;
     <p class="text-primary text-xl font-bold">Project : {title}</p>
     <p class="text-primary text-md">{context}</p>
     <div class="my-6">
-        <lite-youtube class="aspect-video w-full" videoid={videoUrl} ></lite-youtube>
+        <lite-youtube videoid={videoUrl} class="aspect-video w-full"></lite-youtube>
     </div>
     <p class="text-primary text-sm ">{credits}</p>
     <div class="my-6 flex justify-between ">
