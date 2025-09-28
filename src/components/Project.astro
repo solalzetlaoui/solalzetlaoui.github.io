@@ -6,28 +6,30 @@ interface Props {
     credits: string[];
     previousUrl: string;
     nextUrl: string
+    desc: string;
 }
 
-const {title, context, videoUrl, credits, previousUrl, nextUrl} = Astro.props;
+const {title, context, videoUrl, credits, previousUrl, nextUrl, desc} = Astro.props;
 import { YouTube } from '@astro-community/astro-embed-youtube';
 ---
 
 <div class="px:bpc sm:px-bpc">
     <p class="text-primary text-xl font-bold">Project : {title}</p>
-    <p class="text-primary text-md">{context}</p>
-    <div class="my-6">
+    <p class="text-quartary text-sm">{context}</p>
+    <p class="text-primary text-sm sm:text-md">{desc} </p>
+    <div class="my-6 flex justify-between ">
+        <a href={previousUrl} class="text-sm textmarker-effect cursor-pointer">&#8592; Previous</a>
+        <a href={nextUrl} class="text-sm textmarker-effect cursor-pointer">Next &#8594;</a>
+    </div>
+<div class="my-6">
   <div class="my-6">
   <div class="w-full aspect-video">
     <YouTube id={videoUrl} class="!max-w-full" posterQuality="high"/>
   </div>
 </div>
-    <ul class="text-primary text-xsm ">
+    <ul class="text-quartary text-xsm ">
         {credits.map(line => <li class="pt-1">{line}</li>)}
     </ul>
-    <div class="my-6 flex justify-between ">
-        <a href={previousUrl} class="text-md textmarker-effect cursor-pointer">&#8592; Previous</a>
-        <a href={nextUrl} class="text-md textmarker-effect cursor-pointer">Next &#8594;</a>
-    </div>
     
     
 </div>
