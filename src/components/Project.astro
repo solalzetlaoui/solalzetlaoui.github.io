@@ -13,7 +13,7 @@ const {title, context, videoUrl, credits, previousUrl, nextUrl, desc} = Astro.pr
 import { YouTube } from '@astro-community/astro-embed-youtube';
 ---
 
-<div class="px:bpc sm:px-bpc">
+<div class="px-cpc sm:px-bpc">
     <p class="text-primary text-xl font-bold">Project : {title}</p>
     <p class="text-quartary text-sm">{context}</p>
     <p class="text-primary text-sm sm:text-md">{desc} </p>
@@ -21,15 +21,14 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
         <a href={previousUrl} class="text-sm textmarker-effect cursor-pointer">&#8592; Previous</a>
         <a href={nextUrl} class="text-sm textmarker-effect cursor-pointer">Next &#8594;</a>
     </div>
-<div class="my-6">
-  <div class="my-6">
-  <div class="w-full aspect-video">
-    <YouTube id={videoUrl} class="!max-w-full" posterQuality="high"/>
-  </div>
-</div>
-    <ul class="text-quartary text-xsm ">
-        {credits.map(line => <li class="pt-1">{line}</li>)}
-    </ul>
-    
-    
+    <div class="my-6">
+        <div class="my-6">
+            <div class="w-full aspect-video">
+            <YouTube id={videoUrl} class="!max-w-full" posterQuality="high"/>
+            </div>
+        </div>
+        <ul class="text-quartary text-xsm ">
+            {credits.map(line => <li class="pt-1">{line}</li>)}
+        </ul>
+    </div>
 </div>
