@@ -94,3 +94,12 @@
 .textmarker-effect:hover::before {
     width: 100%;
     }
+
+.card-container {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.card-container.fade-in {
+  opacity: 1;
+}

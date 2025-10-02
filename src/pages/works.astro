@@ -8,7 +8,7 @@ import Card from '../components/Card.astro';
     <main>
         <section class="min-h-90screen pt-24">
             <div class="grid grid-cols-1 px-cpc 2xl:px-bpc sm:grid-cols-2 lg:grid-cols-3 gap-3 ">
-                    <div class="relative">
+                    <div class="relative card-container">
                         <a href="/tda">
                             <Card 
                             imagePath="/src/assets/TDA.webp"
@@ -20,7 +20,7 @@ import Card from '../components/Card.astro';
                         </a>
 
                     </div>
-                    <div class="relative">
+                    <div class="relative card-container">
                         <a href="/neotape">
                             <Card 
                             imagePath="/src/assets/NT.webp"
@@ -32,7 +32,7 @@ import Card from '../components/Card.astro';
                         </a>
                     
                     </div>
-                    <div class="relative">
+                    <div class="relative card-container">
                         <a href="/vangr_orchestra">
                             <Card 
                             imagePath="/src/assets/PFE.webp"
@@ -44,7 +44,7 @@ import Card from '../components/Card.astro';
                         </a>
                     
                     </div>
-                    <div class="relative">
+                    <div class="relative card-container">
                         <a href="/marie_antoinette">
                             <Card 
                             imagePath="/src/assets/MA_2.webp"
@@ -56,7 +56,7 @@ import Card from '../components/Card.astro';
                         </a>
                     
                     </div>
-                    <div class="relative">
+                    <div class="relative card-container">
                         <a href="/rollerball">
                             <Card 
                             imagePath="/src/assets/RB.webp"
@@ -84,6 +84,20 @@ import Card from '../components/Card.astro';
                             video.currentTime = 0;
                     }, 150);})
                     });
+
+                // Fade-in animation
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                document.querySelectorAll('.card-container').forEach(card => {
+                    observer.observe(card);
                 });
+            });
     </script>
 </Layout>
