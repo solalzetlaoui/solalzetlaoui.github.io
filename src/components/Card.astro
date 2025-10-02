@@ -12,14 +12,12 @@ interface Props {
 }
 
 const { imagePath, videoPath, altText, title, context, type} = Astro.props;
-const images = import.meta.glob<{ default: ImageMetadata}>('/src/assets/*.(webp)')
-if (!images[imagePath]) throw new Error(`"${imagePath}" does not exist in glob: "src/assets/*.{webp}"`);
 ---
 
 
 
 <div class="group">
-    <Image src={images[imagePath]()} alt={altText} />
+    <img src={imagePath} alt={altText} class="w-full h-auto object-cover" />
         <video src={videoPath} class="video w-full h-auto absolute inset-0 object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" muted loop playsinline></video> 
         <div class="absolute inset-0 bg-secondary bg-opacity-70 opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-0">
         </div>
