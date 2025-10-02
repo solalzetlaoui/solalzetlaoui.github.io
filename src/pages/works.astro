@@ -84,20 +84,45 @@ import Card from '../components/Card.astro';
                             video.currentTime = 0;
                     }, 150);})
                     });
+                });
 
+                
                 // Fade-in animation
                 const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.classList.add('fade-in');
-                            observer.unobserve(entry.target);
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const cardContainer = entry.target;
+                    const img = cardContainer.querySelector('img');
+                    
+                    if (img) {
+                        // Check if image is already loaded
+                        if (img.complete && img.naturalHeight !== 0) {
+                            cardContainer.classList.add('fade-in');
+                            observer.unobserve(cardContainer);
+                        } else {
+                            // Wait for image to load
+                            img.addEventListener('load', () => {
+                                cardContainer.classList.add('fade-in');
+                                observer.unobserve(cardContainer);
+                            });
+                            
+                            // Handle error case
+                            img.addEventListener('error', () => {
+                                cardContainer.classList.add('fade-in');
+                                observer.unobserve(cardContainer);
+                            });
                         }
-                    });
-                }, { threshold: 0.1 });
-
-                document.querySelectorAll('.card-container').forEach(card => {
-                    observer.observe(card);
-                });
+                    } else {
+                        // No image found, proceed with animation
+                        cardContainer.classList.add('fade-in');
+                        observer.unobserve(cardContainer);
+                    }
+                }
             });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card-container').forEach(card => {
+            observer.observe(card);
+        });
     </script>
 </Layout>
