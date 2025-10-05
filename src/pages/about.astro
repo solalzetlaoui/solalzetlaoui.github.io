@@ -42,9 +42,9 @@ import '../styles/global.css';
 			// Handle click on the button.
 			if (button) {
 			  button.addEventListener('click', () => {
-				const textToCopy = button.textContent ? button.textContent.trim() : '';
-				navigator.clipboard.writeText(textToCopy).then(() => {
-				  console.log('Text copied to clipboard:', textToCopy);
+				const emailText = 'solaljz@gmail.com';
+				navigator.clipboard.writeText(emailText).then(() => {
+				  console.log('Text copied to clipboard:', emailText);
 				  // Show the tooltip
 				  if (tooltip) {
 					tooltip.classList.remove('hidden');
