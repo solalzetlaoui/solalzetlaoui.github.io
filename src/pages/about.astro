@@ -8,12 +8,17 @@ import '../styles/global.css';
 		<div class="pt-32">
 			<div  class="px-cpc md:px-bpc min-h-95vh grid grid-cols-1 sm:grid-cols-2 ">
 				<div>	
-					<p class="text-md lg:text-xl font-bold">Contact</p>
-					<div class="relative inline-block">
-						<p class="text-md  mt-4">&#8594; <button id="copy" class="cursor-pointer">solaljz@gmail.com</button> &#8592;</p>
-						<span id="tooltip" class=" absolute hidden bg-secondary text-primary text-xs rounded p-2">Copied!</span>
-					</div>
-				</div>
+                    <p class="text-md lg:text-xl font-bold">Contact</p>
+                    <div class="flex items-center gap-2">
+                        <p class="text-md mt-4">&#8594; solaljz@gmail.com &#8592;</p>
+                        <button id="copy" class="relative cursor-pointer mt-4">
+                            <svg class="fill-primary hover:fill-secondary transition-colors duration-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#e3e3e3" viewBox="0 0 256 256">
+                                <path d="M216,32H88a8,8,0,0,0-8,8V80H40a8,8,0,0,0-8,8V216a8,8,0,0,0,8,8H168a8,8,0,0,0,8-8V176h40a8,8,0,0,0,8-8V40A8,8,0,0,0,216,32ZM160,208H48V96H160Zm48-48H176V88a8,8,0,0,0-8-8H96V48H208Z"></path>
+                            </svg>
+                            <span id="tooltip" class="absolute bg-secondary hidden text-primary text-xs rounded p-2 top-full left-1/2 transform -translate-x-1/2 mt-1">Copied!</span>
+                        </button>
+                    </div>
+                </div>
 				<div class="pt-6 sm:col-span-2">
 					<p class="text-md lg:text-xl font-bold pt-12">More about me</p>
 					<p class="text-sm mt-4"><b>2025 - Now : <br></b> Freelance animator</p>
@@ -23,7 +28,8 @@ import '../styles/global.css';
 					
 				</div>
 			</div>
-		</main>
+		</div>
+	</main>
 
 
 

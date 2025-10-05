@@ -51,11 +51,13 @@
 </header>
 
 <script>
+
+    //Mobile menu
     document.addEventListener('DOMContentLoaded', () => {
         const btn = document.getElementById('mobile-menu-button');
         const menu = document.getElementById('mobile-menu');
         const close = document.getElementById('mobile-menu-close');
-
+        //hides icon on click, reveals menu on click
         const openMenu = () => {
             if (!menu || !btn) return;
             btn.classList.add('hidden');
@@ -63,6 +65,7 @@
             setTimeout(() => menu.classList.remove('opacity-0'), 10);
         };
 
+        //hides menu on click, reveals icon on click
         const closeMenu = () => {
             if (!menu || !btn) return;
             btn.classList.remove('hidden');

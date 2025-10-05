@@ -76,12 +76,12 @@ import Card from '../components/Card.astro';
                     const video = group.querySelector('.video');
                     if (!video) return;
                     group.addEventListener('mouseenter', () => {
-                        video.play();
+                        (video as HTMLVideoElement).play();
                     });
                     group.addEventListener('mouseleave', () => {
-                        video.pause();
+                        (video as HTMLVideoElement).pause();
                         setTimeout(() => {
-                            video.currentTime = 0;
+                            (video as HTMLVideoElement).currentTime = 0;
                     }, 150);})
                     });
                 });

@@ -57,13 +57,13 @@
   --color-primary:rgb(247, 247, 243);
   --color-secondary:rgb(90, 45, 255);
   --color-tertiary:rgb(10, 10, 10);
-  --color-quartary:rgb(204, 204, 202);
+  --color-quartary:rgb(150, 150, 150);
   
   --spacing-screen: 100vh ;
   --spacing-90screen: 90vh;
   --spacing-cpc: clamp(1.25rem, 2vw + 0.2rem, 3rem); /*common padding clamp -- between 1.25 and 3 rem*/
   --spacing-bpc: 15vw; /*bpc, 15vw*/
-  --spacing-vbpc: 25vw;/*bpc, 25vw*/
+  --spacing-vbpc: 25vw;/*vbpc, 25vw*/
   --spacing-hmc: clamp(1.5rem, 2.5vw, 5rem); /* Scales between 1rem and 2rem */
   --spacing-svgsize: clamp(1rem, 2vw + 1rem, 2rem);
 

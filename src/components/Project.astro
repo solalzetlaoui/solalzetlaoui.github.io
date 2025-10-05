@@ -27,8 +27,8 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
             <YouTube id={videoUrl} class="!max-w-full" posterQuality="high"/>
             </div>
         </div>
-        <ul class="text-quartary text-xsm ">
-            {credits.map(line => <li class="pt-1">{line}</li>)}
+        <ul class="text-primary text-xsm ">
+            {credits.map(line => <li class="pt-1">{line}</li>)} <!-- unordered list for credits -->
         </ul>
     </div>
 </div>
