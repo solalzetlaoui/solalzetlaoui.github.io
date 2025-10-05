@@ -39,6 +39,7 @@
     }
 
 @theme {
+  --text-2xsm: 0.8rem;
   --text-xsm: clamp(0.75rem, 2vw, 1rem);
   --text-xsm--font-weight: 400;
   --text-sm: clamp(0.875rem, 2vw, 1.125rem);
@@ -57,7 +58,7 @@
   --color-primary:rgb(247, 247, 243);
   --color-secondary:rgb(90, 45, 255);
   --color-tertiary:rgb(10, 10, 10);
-  --color-quartary:rgb(150, 150, 150);
+  --color-quartary:rgb(170, 170, 170);
   
   --spacing-screen: 100vh ;
   --spacing-90screen: 90vh;

@@ -1,5 +1,5 @@
-<header class="w-full h-20 flex items-center fixed inset-0 3xl:px-bpc px-cpc z-10">
-	<a aria-labelledby="logo" class="flex items-center justify-center " href="/">
+<header class="w-full h-20 flex items-center fixed inset-0 3xl:px-bpc px-cpc z-10 bg-gradient-to-b from-tertiary/40 to-transparent pointer-events-none">
+	<a aria-labelledby="logo" class="flex items-center justify-center pointer-events-auto" href="/">
         <svg  class="size-svgsize fill-primary hover:fill-secondary transition-colors duration-300" id="Layer_5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.38 97.76">
             <path d="M45.78,0l-1.19,3.26c6.79,5.09,11.19,13.2,11.19,22.33,0,15.4-12.48,27.88-27.88,27.88L0,82.05v15.71h56.62l1.18-3.22c-6.79-5.09-11.19-13.2-11.19-22.33,0-15.4,12.48-27.88,27.88-27.88l27.88-28.57V0h-56.61Z"/>
             <circle cx="74.45" cy="72.17" r="18.8"/>
@@ -7,25 +7,25 @@
         </svg>
     </a>
     <ul class="hidden w-full sm:flex justify-end">
-        <li>
+        <li class="pointer-events-auto">
             <a class="text-md font-bold textmarker-effect" href="/">Home</a>
         </li>
-        <li>
+        <li class="pointer-events-auto">
             <a class="mx-hmc text-md font-bold textmarker-effect" href="/works">Works</a>
         </li>
-        <li>
+        <li class="pointer-events-auto">
             <a class="text-md font-bold textmarker-effect" href="/about">About</a>
         </li>
     </ul>
        <!-- Mobile Menu Button -->
-    <button id="mobile-menu-button" class="sm:hidden ml-auto p-2">
+    <button id="mobile-menu-button" class="sm:hidden ml-auto p-2 pointer-events-auto">
         <svg class="w-6 h-6 fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
             <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="4"/>
         </svg>
     </button>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black z-20 hidden opacity-0 transition-opacity duration-300 ease-in-out">
+    <div id="mobile-menu" class="fixed inset-0 bg-black z-20 hidden opacity-0 transition-opacity duration-300 ease-in-out pointer-events-auto">
         <div class="absolute top-6 right-6">
             <button id="mobile-menu-close" class="p-2">
                 <svg class="w-6 h-6 fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">

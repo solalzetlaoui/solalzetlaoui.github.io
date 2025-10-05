@@ -15,11 +15,11 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
 
 <div class="px-cpc sm:px-bpc">
     <p class="text-primary text-xl font-bold">Project : {title}</p>
-    <p class="text-quartary text-sm">{context}</p>
-    <p class="text-primary text-sm sm:text-md">{desc} </p>
+    <p class="text-quartary text-md sm:text-sm">{context}</p>
+    <p class="text-primary text-md">{desc} </p>
     <div class="my-6 flex justify-between ">
-        <a href={previousUrl} class="text-sm textmarker-effect cursor-pointer">&#8592; Previous</a>
-        <a href={nextUrl} class="text-sm textmarker-effect cursor-pointer">Next &#8594;</a>
+        <a href={previousUrl} class="text-md sm:text-sm textmarker-effect cursor-pointer">&#8592; Previous</a>
+        <a href={nextUrl} class="text-md sm:text-sm textmarker-effect cursor-pointer">Next &#8594;</a>
     </div>
     <div class="my-6">
         <div class="my-6">
@@ -27,7 +27,7 @@ import { YouTube } from '@astro-community/astro-embed-youtube';
             <YouTube id={videoUrl} class="!max-w-full" posterQuality="high"/>
             </div>
         </div>
-        <ul class="text-primary text-xsm ">
+        <ul class="text-primary text-sm sm:text-xsm ">
             {credits.map(line => <li class="pt-1">{line}</li>)} <!-- unordered list for credits -->
         </ul>
     </div>
